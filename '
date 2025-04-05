@@ -82,71 +82,12 @@
 // }
 //
 // showPrimes(20);
-// const address = {
-//   street: "navab",
-//   city: "mashad",
-//   zipCode: "hello mashad",
-//   showAddress() {
-//     for (const key in this) {
-//       console.log(key, this[key]);
-//     }
-//   },
-// };
-// function address(street, city, zipCode) {
-//   return {
-//     street,
-//     city,
-//     zipCode,
-//   };
-// }
-//
-// function Address(street, city, zipCode) {
-//   this.street = street;
-//   this.city = city;
-//   this.zipCode = zipCode;
-// }
-//
-// const address1 = new Address("A", "B", "C");
-//
-// const address2 = new Address("A", "B", "C");
-//
-// function isEqual(address1, address2) {
-//   const address1Length = Object.keys(address1).length;
-//   const address2Length = Object.keys(address2).length;
-//
-//   if (address1Length !== address2Length) return false;
-//
-//   for (const key in address1) {
-//     if (!(key in address2)) return false;
-//     if (address1[key] !== address2[key]) return false;
-//   }
-//
-//   return true;
-// }
-//
-// console.log(isEqual(address1, address2));
-//
-// function isSame(address1, address2) {
-//   if (!isEqual(address1, address2)) return false;
-//   address1.isSameTesting = 1;
-//   if (!("isSameTesting" in address2) || address2.isSameTesting === 1) {
-//     delete address1.isSameTesting;
-//     return false;
-//   }
-//   delete address1.isSameTesting;
-//   return true;
-// }
-//
-// console.log(isSame(address2, address1));
-
-const firstBlogpost = {
-  title: "blog title",
-  body: `blog body`,
-  author: "blog author",
-  views: 67,
-  comments: [
-    { author: "author1", body: `comment body` },
-    { author: "author2", body: `comment body` },
-  ],
-  isLive: true,
+const address = {
+  street: "navab",
+  city: "mashad",
+  zipCode: "hello mashad",
+  showAddress() {
+    console.log(this.city, " ", this.street);
+  },
 };
+address.showAddress();
