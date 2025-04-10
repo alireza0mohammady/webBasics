@@ -139,14 +139,105 @@
 //
 // console.log(isSame(address2, address1));
 
-const firstBlogpost = {
-  title: "blog title",
-  body: `blog body`,
-  author: "blog author",
-  views: 67,
-  comments: [
-    { author: "author1", body: `comment body` },
-    { author: "author2", body: `comment body` },
-  ],
-  isLive: true,
-};
+// const firstBlogpost = {
+//   title: "blog title",
+//   body: `blog body`,
+//   author: "blog author",
+//   views: 67,
+//   comments: [
+//     { author: "author1", body: `comment body` },
+//     { author: "author2", body: `comment body` },
+//   ],
+//   isLive: true,
+// };
+//
+// let randomArray = [
+//   { name: "ali", ID: 23 },
+//   { name: "reza", ID: 53 },
+// ];
+//
+// let ID23exist = randomArray.find((element) => {
+//   if (element.ID === 23) return true;
+// });
+//
+// console.log(ID23exist);
+
+// function arrayFromRange(a, b) {
+//   let outPut = [];
+//
+//   if (a >= b) {
+//     for (let index = b; index <= a; index++) {
+//       outPut.push(index);
+//     }
+//   }
+//   if (a < b) {
+//     for (let index = a; index <= b; index++) {
+//       outPut.push(index);
+//     }
+//   }
+//   return outPut;
+// }
+//
+// console.log(arrayFromRange(1, 5));
+// console.log(arrayFromRange(1, -5));
+// console.log(arrayFromRange(1, 1));
+
+// const oneToNineArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//
+// function includes(array, searchElement) {
+//   let functionOutpot = false;
+//   array.forEach((element) => {
+//     if (element === searchElement) functionOutpot = true;
+//   });
+//   return functionOutpot;
+// }
+//
+// console.log(includes(oneToNineArray, 6));
+// console.log(includes(oneToNineArray, 0));
+
+// const oneToNineArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//
+// function exclud(array, excludingElements) {
+//   const arrayCopy = [...array];
+//
+//   arrayCopy.forEach((element, index) => {
+//     excludingElements.forEach((value) => {
+//       if (value === element) {
+//         arrayCopy.splice(index, 1);
+//       }
+//     });
+//   });
+//
+//   return arrayCopy;
+// }
+//
+// console.log(exclud(oneToNineArray, [2, 3]));
+
+// const array = [1, 2, 3, 4, 5, 1, 1, 2];
+//
+// function countOccorrences(array, countElement) {
+//   let occorrences = array.reduce((total, current) => {
+//     if (current === countElement) return ++total;
+//     return total;
+//   }, 0);
+//   return occorrences;
+// }
+//
+// console.log(countOccorrences(array, 1));
+// console.log(countOccorrences(array, 2));
+// console.log(countOccorrences(array, 3));
+let array = [1, 2, 3, 42, 5, 6, 7, 8, 9, 10];
+
+function getMax(array) {
+  if (typeof array !== "object") {
+    console.error("not a array");
+    return "not a array";
+  }
+  let max = array.reduce((maxNumber, current) => {
+    if (current > maxNumber) return (maxNumber = current);
+    return maxNumber;
+  }, 0);
+  return max;
+}
+
+console.log(getMax(array));
