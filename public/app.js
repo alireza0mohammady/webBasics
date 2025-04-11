@@ -226,18 +226,20 @@
 // console.log(countOccorrences(array, 1));
 // console.log(countOccorrences(array, 2));
 // console.log(countOccorrences(array, 3));
-let array = [1, 2, 3, 42, 5, 6, 7, 8, 9, 10];
+// let array = [1, 2, 3, 42, 5, 6, 7, 8, 9, 10];
 
-function getMax(array) {
-  if (typeof array !== "object") {
-    console.error("not a array");
-    return "not a array";
-  }
-  let max = array.reduce((maxNumber, current) => {
-    if (current > maxNumber) return (maxNumber = current);
-    return maxNumber;
-  }, 0);
-  return max;
-}
+// function getMax(array) {
+//   if (typeof array !== "object") {
+//     console.error("not a array");
+//     return "not a array";
+//   }
+//   let max = array.reduce((maxNumber, current) => {
+//     if (current > maxNumber) return (maxNumber = current);
+//     return maxNumber;
+//   }, 0);
+//   return max;
+// }
 
-console.log(getMax(array));
+// console.log(getMax(array));
+
+// functions
