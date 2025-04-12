@@ -226,18 +226,50 @@
 // console.log(countOccorrences(array, 1));
 // console.log(countOccorrences(array, 2));
 // console.log(countOccorrences(array, 3));
-let array = [1, 2, 3, 42, 5, 6, 7, 8, 9, 10];
+// let array = [1, 2, 3, 42, 5, 6, 7, 8, 9, 10];
+//
+// function getMax(array) {
+//   if (typeof array !== "object") {
+//     console.error("not a array");
+//     return "not a array";
+//   }
+//   let max = array.reduce((maxNumber, current) => {
+//     if (current > maxNumber) return (maxNumber = current);
+//     return maxNumber;
+//   }, 0);
+//   return max;
+// }
+//
+// console.log(getMax(array));
 
-function getMax(array) {
-  if (typeof array !== "object") {
-    console.error("not a array");
-    return "not a array";
-  }
-  let max = array.reduce((maxNumber, current) => {
-    if (current > maxNumber) return (maxNumber = current);
-    return maxNumber;
-  }, 0);
-  return max;
+const movies = [
+  { title: "A", year: 2015, rating: 4.5 },
+  { title: "B", year: 2011, rating: 2.5 },
+  { title: "D", year: 2017, rating: 5 },
+  { title: "E", year: 2017, rating: 5 },
+  { title: "F", year: 2017, rating: 4 },
+  { title: "G", year: 2017, rating: 3.5 },
+];
+
+function filter(movies, year, rating) {
+  let moviesCopy = [...movies];
+
+  let filteredArray = moviesCopy.filter((value) => {
+    if (value.year === year && value.rating >= rating) return true;
+    return false;
+  });
+
+  filteredArray.sort((a, b) => {
+    return b.rating - a.rating;
+  });
+
+  let outPut = [];
+
+  filteredArray.forEach((value) => {
+    outPut.push(value.title);
+  });
+
+  return outPut;
 }
 
-console.log(getMax(array));
+console.log(filter(movies, 2017, 4));
