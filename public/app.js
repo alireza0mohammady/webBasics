@@ -273,3 +273,12 @@
 // }
 //
 // console.log(filter(movies, 2017, 4));
+
+const circle = {
+  radius: 5,
+  get area() {
+    return this.radius * this.radius * 3.14;
+  },
+};
+
+console.log(circle.area);
